@@ -1,0 +1,55 @@
+form{
+  background-color: #eee;
+  border-radius: 2px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font: 14px arial;
+  color: #333;
+  width: 320px;
+  margin-bottom: 40px;
+}
+
+label{
+  width: 150px;
+  display: inline-block;
+}
+
+input{
+  width: 150px;
+  border: 1px solid #ccc;
+}
+
+select{
+  width: 150px;
+}
+
+#submit, #submitGist{
+  width: 100px;
+  padding: 5px 10px;
+  float: right;
+  background: lightblue;
+  border: 0;
+  color: white;
+  text-shadow: 0 1px 0 0 rgba(0,0,0, 0.6);
+  cursor: pointer;
+}
+
+br{
+  clear: both;
+}
+
+textarea{
+  width: 320px;
+  height: 200px;
+  background: #333;
+  padding: 5px 10px;
+  color: green;
+  font-family: monospace;
+  border: 0;
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+}

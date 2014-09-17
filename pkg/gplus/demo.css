@@ -1,0 +1,31 @@
+#sortable {
+  background-color: #EEE;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 550px;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+#sortable div {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  float: left;
+  width: 125px;
+  height: 100px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#sortable a {
+  font-size: 12px;
+  color: blue;
+}
+
+img {
+  display: block;
+  border: 1px solid gray;
+  margin: 5px auto;
+}

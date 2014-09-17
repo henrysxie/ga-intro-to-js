@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href='style.css' />
+  </head>
+  <body>
+    <form id='person'>
+       <label for='fname'>First name:</label><input type="text" id="fname">
+       <label for='lname'>Last name:</label><input type="text" id="lname">
+       <label for='age'>Age:</label><input type="text" id="age">
+
+       <label for='industry'>Industry:</label>
+       <select id="industry">
+         <option value="technology">Technology</option>
+         <option value="finance">Finance</option>
+         <option value="law">Law</option>
+         <option value="medicine">Medicine</option>
+       </select>
+
+       <input id="submit" type="button" value="Process Form">
+       <br />
+    </form>
+    <form id='gist'>
+      <label for='description'>Description:</label>
+      <input type="text" id="description">
+      <label for='content'>Content:</label>
+      <input type="text" id="content">
+
+      <label for='public'>Public:</label>
+      <select id="public">
+       <option value="true">Yup</option>
+       <option value="false">Nope</option>
+      </select>
+
+      <input id="submitGist" type="button" value="Post this gist">
+      <br />
+    </form>
+    <textarea id='output'></textarea>
+    <script type='text/javascript' 
+            src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type='text/javascript' src='script.js'></script>
+  </body>
+</html>
