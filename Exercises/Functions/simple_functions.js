@@ -1,4 +1,4 @@
-1. Write a function that takes prints all the even numbers between 1 and 10,000.
+1. Write a function that prints all the even numbers between 1 and 10,000.
 
 2a. Write a function that returns an array of the numbers between 1 and 10,000 that are divisible by 3.
 
