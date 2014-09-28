@@ -14,12 +14,52 @@ function range(start, end) {
 
 
 function looping(divisor) {
-    var items = range(10, 30);
+    var items = range(1, 10)
+    var sum = 0;
 
     for (var i = 0; i < items.length; i++) {
         var number = items[i];
-        if (number % divisor === 0) {
-            console.log(number);
+        sum += number * number;
+    }
+
+    return sum;
+}
+
+function getMax(list) {
+    console.log(list);
+    var maxNumber;
+
+    for (var i = 0; i < list.length; i++) {
+        var currentNumber = list[i];
+        if (currentNumber > maxNumber || isNaN(maxNumber)) {
+            maxNumber = currentNumber;
         }
     }
+
+    return maxNumber;
+
+
+
+    // if (something > somethingElse) {
+    //     return something;
+    // }
+    // else {
+    //     return somethingElse;
+    // }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

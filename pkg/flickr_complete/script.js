@@ -65,6 +65,7 @@ function imageLoad(){
 
   // Add the picture to the container
   postContainer.appendChild(this);
+
   // Set the post to fill the screen
   fitToViewport(this.parentElement);
   // And add it to the slideshow
@@ -108,7 +109,7 @@ function getPosts(){
 
 function nextImage(e){
   // If this was called from an event
-  // tell teh browser not to do any default behaviours  
+  // tell teh browser not to do any default behaviours
   if(e) e.gesture.preventDefault();
   resetInterval();
   var current = document.getElementsByClassName('active')[0]

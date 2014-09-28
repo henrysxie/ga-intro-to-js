@@ -1,8 +1,9 @@
-1. Write a function that prints all the even numbers between 1 and 10,000.
+1. Write a function that prints the sum of the squares of the first 10 numbers.
 
 2a. Write a function that returns an array of the numbers between 1 and 10,000 that are divisible by 3.
 
-3. Write a function 'get_max' that takes a list of numbers and returns the max of those numbers, don't use the max() function.
+3. Write a function 'getMax' that takes a list of numbers and returns the max of those numbers,
+   don't use the max() function.
 
 4. Write a function 'is_odd_or_div_by_7' that returns True if a number is odd or divisble by 7 and False otherwise.
 

@@ -1,36 +1,13 @@
 "use strict";
 
+var test;
 var imageCount = 20;
 var indexCounter = 0;
 
 var container = $('#container');
+
 var viewport = $('#viewport');
 
-function showImage(index){
-  // whats the offset? hint: use the image number and the viewport width
-
-  var viewportWidth = -$(window).width();
-
-  // What's the offset
-  // Use the offset as the margin-left
-}
-
-function nextImage(){
-
-  // if indexcounter is the same as imagecount
-  // reset the indexcounter to 0
-
-  // increment the indexcounter
-  // call showImage with the indexCounter
-}
-
-function apiSuccess(result){
-  var photos = result['items'];
-  console.log(photos);
-
-  // For photo in photos
-
-}
 
 var ajaxSettings = {
   // The url to flickrs api
@@ -41,4 +18,54 @@ var ajaxSettings = {
   success: apiSuccess,
 };
 
+
 $.ajax(ajaxSettings);
+
+
+function showImage(index){
+  // whats the offset? hint: use the image number and the viewport width
+
+  var viewportWidth = -$(window).width();
+  // What's the offset
+  container.css('margin-left', index * viewportWidth + "px");
+  // Use the offset as the margin-left
+}
+
+function nextImage(){
+
+  // if indexcounter is the same as imagecount
+  debugger
+  if (indexCounter == imageCount - 1) {
+    // reset the indexcounter to 0
+    indexCounter = 0;
+  }
+
+  // increment the indexcounter
+  indexCounter++;
+  // call showImage with the indexCounter
+  showImage(indexCounter);
+  debugger
+}
+
+function apiSuccess(result){
+  var photos = result['items'];
+  test = photos;
+  console.log(photos);
+
+  // For photo in photos
+  for (var i = 0; i < photos.length; i++) {
+    var photo = photos[i];
+    var post = $('<div class="post"></div>');
+    var img = $('<img src="' + photo.media.m.replace('_m', '_b') + '" />');
+
+    // Fit post to viewport width
+    post.width(viewport.width());
+
+    post.append(img);
+    container.append(post);
+  }
+
+  setInterval(nextImage, 5000);
+
+
+}
