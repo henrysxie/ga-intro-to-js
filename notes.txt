@@ -1,0 +1,33 @@
+0. Introduction of myself
+    - Founder of Partake
+    - Used to be a full-stack developer at Yipit
+    - Studied Applied Math, Economics, and Computer Science at Harvard
+    - Studied abroad in Hong Kong but originally from Sweden
+    - Likes rock climbing, piano, poker and go
+
+1. Go around for and ask everybody for:
+    - Name
+    - Background
+    - Why taking the class
+    - What you hope to learn
+
+2. Ask how many have programmed at all before
+
+3. Ask how many have seen Javascript
+
+4. Ask how many have seen HTML/CSS
+
+5. Ask how many have a basic understanding of the web and the internet
+
+6. Why Javascript?
+    - One of the most popular
+    - All browsers use it
+    - Front-end
+    - Backend
+    - Mobile apps
+
+7. Overview of workshop
+    - Teach you the fundamentals of Javascript
+    - Do a bunch of exercises
+    - Later try to tie it into building simple web apps
+    - We're not that many, which means I can act as a private tutor for all of you. Don't hesitate to ask questions!
