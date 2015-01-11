@@ -1,5 +1,5 @@
 "use strict";
-  
+
 // Literals - fixed values not variables
 'hello world'; // string
 2; // numbers
@@ -70,8 +70,3 @@ var legCollection = [
     'height': 1.8
   },
 ];
-// console.log(legCollection);
-
-// http://www.reddit.com/r/britishproblems/hot.json
-// proove json is readable
-// JSON.parse($('pre').innerHTML)
