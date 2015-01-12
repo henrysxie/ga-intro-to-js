@@ -1,5 +1,17 @@
 "use strict";
 
+
+function divisor (number) {
+    if (number <= 0) {
+        return "Provide a legit divisor!";
+    }
+
+    for (var i = 0; i < 10000; i += number) {
+        console.log(i);
+    }
+}
+
+
 function helloGreeting (name) {
     var random = Math.random();
     if (random > 0.5) {
@@ -91,6 +103,58 @@ function tally(orders) {
     }
     return tally;
 }
+
+
+function forEach (list, action) {
+    for (var i = 0; i < list.length; i++) {
+        action(list[i]);
+    }
+}
+
+function sum(numbers) {
+    var total = 0;
+    forEach(numbers, function(number) {
+        total += number;
+    });
+    return total;
+}
+
+
+function reduce (combine, base, list) {
+    forEach(list, function(element) {
+        base = combine(base, element);
+    });
+    return base;
+}
+
+function add (n1, n2) {
+    return n1 + n2;
+}
+
+function multiply (n1, n2) {
+    return n1 * n2;
+}
+
+function divide (n1, n2) {
+    return n1 / n2;
+}
+
+function reduceSum (numbers) {
+    return reduce(add, 0, numbers);
+}
+
+function reduceMultiply (numbers) {
+    return reduce(multiply, 1, numbers);
+}
+
+function reduceDivide (numbers, base) {
+    return reduce(divide, base, numbers);
+}
+
+
+
+
+
 
 
 

@@ -13,9 +13,22 @@ function addToDOM(result){
   linksContainer.append(myDiv);
 }
 
+
+var links;
 function successFunction(result){
-  var links = result['data']['children'];
-  console.log(links);
+  links = result['data']['children'];
+  // console.log(links);
+
+  // var thumbnails = _.map(links, function(link) {
+  //   return link.data.thumbnail;
+  // });
+
+  // console.log(thumbnails);
+
+  for (var i = 0; i < links.length; i++) {
+    addToDOM(links[i]);
+  }
+
   // for each link in links array
   //   currentLink =
   //   console.log currentLink title
