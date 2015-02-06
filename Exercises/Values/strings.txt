@@ -1,3 +1,5 @@
+# Create the below strings in Javascript
+
 Hi, my name is {{ your name }}!
 
 I don't like junk food

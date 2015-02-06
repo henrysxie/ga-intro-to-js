@@ -1,0 +1,5 @@
+Write a function that uses `prompt` to get a number from the user,
+and `alert`s the user that the number is the square root of <another number>.
+
+Challenge: Have your function deal with erroneous user input, e.g. "not a number",
+and `alert` the user to please enter a real number.
