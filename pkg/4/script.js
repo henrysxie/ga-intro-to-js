@@ -15,7 +15,14 @@ function addToDOM(result){
 
 function successFunction(result){
   var links = result['data']['children'];
-  console.log(links);
+  for (var i = 0; i < links.length; i++) {
+    var currentLink = links[i];
+
+    if (currentLink['data']['thumbnail']) {
+      addToDOM(currentLink);
+    }
+  }
+
   // for each link in links array
   //   currentLink =
   //   console.log currentLink title

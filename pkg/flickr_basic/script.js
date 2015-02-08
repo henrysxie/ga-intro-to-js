@@ -1,6 +1,6 @@
 "use strict";
 
-var imageCount = 20;
+var imageCount = 10;
 var indexCounter = 0;
 
 var container = $('#container');
@@ -10,12 +10,17 @@ function showImage(index){
   // whats the offset? hint: use the image number and the viewport width
 
   var viewportWidth = -$(window).width();
-
-  // What's the offset
-  // Use the offset as the margin-left
+  container.css('margin-left',  index * viewportWidth);
 }
 
 function nextImage(){
+  indexCounter++;
+  showImage(indexCounter);
+
+  if (indexCounter > 10) {
+    indexCounter = 0;
+    showImage(indexCounter);
+  }
 
   // if indexcounter is the same as imagecount
   // reset the indexcounter to 0
@@ -26,9 +31,25 @@ function nextImage(){
 
 function apiSuccess(result){
   var photos = result['items'];
+  imageCount = photos.length;
   console.log(photos);
 
   // For photo in photos
+  for (var i = 0; i < photos.length; i++) {
+    var photo = photos[i];
+    var post = $('<div class="post"></div>');
+    var src = photo.media.m;
+    var bigSrc = src.replace('_m', '_b');
+    var myImg = $("<img src='" + bigSrc + "' />");
+
+    console.log(photo.media.m);
+    post.append(myImg);
+
+    post.width(viewport.width());
+
+    container.append(post);
+
+  }
 
 }
 
@@ -42,3 +63,8 @@ var ajaxSettings = {
 };
 
 $.ajax(ajaxSettings);
+
+
+$("body").on("keydown", function() {
+  nextImage();
+});
