@@ -13,6 +13,8 @@ function showImage(index){
 
   // What's the offset
   // Use the offset as the margin-left
+  container.css("margin-left", index * viewportWidth + "px");
+  indexCounter = index;
 }
 
 function nextImage(){
@@ -20,15 +22,43 @@ function nextImage(){
   // if indexcounter is the same as imagecount
   // reset the indexcounter to 0
 
-  // increment the indexcounter
+  if (indexCounter == imageCount - 1) {
+    indexCounter = 0;
+  }
+  else {
+    // increment the indexcounter
+    indexCounter++;
+  }
+
   // call showImage with the indexCounter
+  showImage(indexCounter);
+}
+
+function addToDOM (photo) {
+  var myDiv = $('<div class="post"></div>');
+
+  var myImg = $('<img src="' + photo.media.m.replace('_m.jpg', '_b.jpg') + '" />');
+  myDiv.append(myImg);
+
+  // set width of myDiv to be that of viewport
+  var viewportWidth = viewport.width();
+  myDiv.width(viewportWidth);
+
+  container.append(myDiv);
 }
 
 function apiSuccess(result){
+
   var photos = result['items'];
   console.log(photos);
 
   // For photo in photos
+  for (var i = 0; i < photos.length; i++) {
+    addToDOM(photos[i]);
+  }
+
+  // setInterval
+  setInterval(nextImage, 5000);
 
 }
 

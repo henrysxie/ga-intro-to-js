@@ -3,10 +3,10 @@
 var api = 'http://reddit.com/.json?limit=10&jsonp=?';
 var linksContainer = $('#links');
 
-function addToDOM(result){
+function addToDOM(link){
   var myDiv = $('<div></div>');
-  var myImage = $("<img src='" + result['data']['thumbnail'] + "' />");
-  var myTitle = $("<div>"+ result['data']['title'] +"</div>");
+  var myImage = $("<img src='" + link['data']['thumbnail'] + "' />");
+  var myTitle = $("<div>"+ link['data']['title'] +"</div>");
 
   myDiv.append(myImage);
   myDiv.append(myTitle);
@@ -14,12 +14,14 @@ function addToDOM(result){
 }
 
 function successFunction(result){
+
   var links = result['data']['children'];
-  console.log(links);
-  // for each link in links array
-  //   currentLink =
-  //   console.log currentLink title
-  //   console.log is `thumbnail` empty?
+  console.log(links)
+
+  for (var i = 0; i < links.length; i++) {
+    addToDOM(links[i]);
+  }
+
 }
 
 var ajaxOptions = {
