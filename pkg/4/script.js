@@ -8,18 +8,18 @@ function addToDOM(result){
   var myImage = $("<img src='" + result['data']['thumbnail'] + "' />");
   var myTitle = $("<div>"+ result['data']['title'] +"</div>");
 
-  myDiv.append(myImage);
-  myDiv.append(myTitle);
+  myDiv.append(myTitle, myImage);
+  myDiv.addClass('reddit-link');
+
   linksContainer.append(myDiv);
 }
 
 function successFunction(result){
   var links = result['data']['children'];
-  console.log(links);
-  // for each link in links array
-  //   currentLink =
-  //   console.log currentLink title
-  //   console.log is `thumbnail` empty?
+  for (var i = 0; i < links.length; i++) {
+    var currentLink = links[i];
+    addToDOM(currentLink);
+  }
 }
 
 var ajaxOptions = {

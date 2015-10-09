@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>An html page</title>
-    <link rel="stylesheet" type="text/css" href='style.css' />
-  </head>
-  <body>
-    <div id='viewport'>
-      <div id='container'></div>
-    </div>
-    <script type='text/javascript' 
-            src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
-    <script type='text/javascript' src='script.js'></script>
-  </body>
-</html>
+<!doctype html>
+<head>
+  <style>
+    /* Prevents slides from flashing */
+    #slides {
+      display:none;
+    }
+  </style>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery.slides.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    $(function(){
+      $("#slides").slidesjs({});
+    });
+  </script>
+</head>
+<body>
+  <div id="slides"></div>
+</body>
