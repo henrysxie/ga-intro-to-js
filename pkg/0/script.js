@@ -1,71 +1,56 @@
 "use strict";
 
-// if (3 > 5) {
-//     alert("that's crazy");
-// }
 
-// else if ("hello" == "hello") {
+console.log("Commencing execution!!");
 
-//     if ("hello".length == 55) {
-//         alert("Hello is 5 characters long");
-//     }
-//     else {
-//         alert("I have no idea how many characters long Hello is");
-//     }
-// }
 
-// else {
-//     alert("that's normal");
-// }
 
-var letters = ["a", "b", "c"];
 
-function greet (phrase) {
-    alert(phrase + ' class!');
+// Takes a list of numbers and prints their squares
+function printSquares (numbers) {
+
+    for (var i = 0; i < numbers.length; i++) {
+       console.log(Math.pow(numbers[i], 2));
+    }
 }
 
-function printEvens() {
 
-    for (var i = 1; i <= 10000; i++) {
+// Prints all evens between 0 and 9999
+function printEvens () {
+
+    for (var i = 0; i < 10000; i++) {
         if (i % 2 == 0) {
             console.log(i);
         }
-    }
+    };
 
 }
 
-function divisibleBy(divisor) {
 
-    var arr = [];
+// Returns a list of all numbers divisible by `divisor`
+// up until but not including `max`
+function getDivBy(max, divisor) {
 
-    for (var i = 1; i <= 10000; i++) {
+    var results = [];
+
+    for (var i = 0; i < max; i++) {
         if (i % divisor == 0) {
-            arr.push(i);
+            // Push i onto the results array
+            results.push(i);
         }
-    }
+    };
 
-    console.log(arr);
+    return results;
 
 }
 
-
-
+// Takes a list of numbers and returns the largest one
 function getMax (numbers) {
-
-    // Initialize currentMax to first number
-    var currentMax = numbers[0];
-
-    // Loop through list of numbers
+    var maxNumber = numbers[0];
     for (var i = 0; i < numbers.length; i++) {
-
-        // If current number > currentMax, update currentMax
-        if (numbers[i] > currentMax) {
-            currentMax = numbers[i];
+        if (numbers[i] > maxNumber) {
+            maxNumber = numbers[i];
         }
-
     }
-
-    // Return currentMax
-    return currentMax;
-
+    return maxNumber;
 }
