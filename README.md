@@ -13,7 +13,7 @@ Build solid foundation in Javascript, a programming language essential to web de
 - Starter package: see below.
 
 # Starter package setup
-- [Download](https://github.com/xie1989/ga-intro-to-js/blob/master/pkg.zip) Starter Package by clicking "Raw" after following link
+- [Download](https://github.com/xie1989/ga-intro-to-js/blob/master/introJS.zip) Starter Package by clicking "Raw" after following link
 - Extract package
 - Move extracted folder to desired location (e.g. My Documents)
 - In Sublime Text 3, do: File -> Open, and navigate to folder location, mark entire folder, and click Open.
