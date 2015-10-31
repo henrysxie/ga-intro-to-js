@@ -1,4 +1,3 @@
-"use strict";
 
 // Literals - fixed values not variables
 'hello world'; // string

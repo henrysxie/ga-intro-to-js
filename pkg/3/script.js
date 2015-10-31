@@ -1,5 +1,3 @@
-"use strict";
-
 var countacular = ['one', 'two', 'three', 'four'];
 // console.log(countacular[0]);
 // console.log(countacular[1]);

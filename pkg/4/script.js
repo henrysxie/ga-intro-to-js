@@ -1,5 +1,3 @@
-"use strict";
-
 var api = 'http://reddit.com/.json?limit=10&jsonp=?';
 var linksContainer = $('#links');
 

@@ -1,5 +1,3 @@
-"use strict";
-
 var imageCount = 10;
 var indexCounter = 0;
 
@@ -8,52 +6,26 @@ var viewport = $('#viewport');
 
 function showImage(index){
 
-  // whats the offset? hint: use the image number and the viewport width
+  var viewportWidth = $(window).width();
 
-  var viewportWidth = -$(window).width();
-  container.css('margin-left', viewportWidth * index);
-
-
-  // What's the offset
-  // Use the offset as the margin-left
-}
-
-
-function previousImage () {
-
-  if (indexCounter == 0) {
-    indexCounter = imageCount - 1;
-  }
-  else {
-    indexCounter--;
-  }
-  showImage(indexCounter);
+  // set margin-left property of container such that the correct image shows
+  // what's the offset? hint: use the index and the viewport width
 
 }
 
 
 function nextImage(){
 
-  // if indexcounter is the same as imagecount - 1
-  // reset the indexcounter to 0
+  // if we're at last image reset the indexcounter to 0
+  // else increment the indexcounter
 
-  if (indexCounter == imageCount - 1) {
-    indexCounter = 0;
-  }
-  else {
-    indexCounter++;
-  }
-  showImage(indexCounter);
+  // call showImage with the indexCounter
 
 }
 
-function addToDOM (result) {
-  var imageSrc = result['media']['m'];
-  // Replace _m.jpg with _b.jpg
-  imageSrc = imageSrc.replace('_m.jpg', '_b.jpg');
+function addToDOM (photo) {
 
-  var myImage = $("<img src='" + imageSrc + "' />");
-  $('#slides').append(myImage);
+  // Grab image url and append to dom in a div with class "post"
 
 }
 
@@ -62,11 +34,7 @@ function apiSuccess(result){
   var photos = result['items'];
   console.log(photos);
 
-  // For photo in photos
-  for (var i = 0; i < photos.length; i++) {
-    var currentPhoto = photos[i];
-    addToDOM(currentPhoto);
-  }
+  // Loop over photos and add each to DOM
 
 }
 
@@ -80,17 +48,3 @@ var ajaxSettings = {
 };
 
 $.ajax(ajaxSettings);
-
-
-function onKeyPress( event ) {
-
-  if (event.which == 109) {
-    nextImage();
-  }
-  else if (event.which == 110) {
-    previousImage();
-  }
-}
-
-$(window).keypress(onKeyPress);
-
