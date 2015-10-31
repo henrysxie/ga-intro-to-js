@@ -16,10 +16,9 @@ function addToDOM(result){
 
 function successFunction(result){
   var links = result['data']['children'];
-  for (var i = 0; i < links.length; i++) {
-    var currentLink = links[i];
-    addToDOM(currentLink);
-  }
+  console.log(links);
+
+  // Loop over links and add each to the DOM
 }
 
 var ajaxOptions = {

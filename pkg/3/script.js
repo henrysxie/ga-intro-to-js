@@ -5,24 +5,24 @@ var countacular = ['one', 'two', 'three', 'four'];
 // console.log(countacular[1]);
 // console.log(countacular[2]);
 
-var henryC = {
-  'first_name': 'henry',
-  'last_name': 'clifford',
+var henryX = {
+  'firstName': 'henry',
+  'lastName': 'xie',
   'gender': 'male',
 };
 // Javascript supports different accessor syntaxes.
-// console.log(henryC['first_name']);
-// console.log(henryC['last_name']);
-// console.log(henryC.first_name);
-// console.log(henryC.last_name);
+// console.log(henryX['first_name']);
+// console.log(henryX['last_name']);
+// console.log(henryX.first_name);
+// console.log(henryX.last_name);
 
 // I lied
-var myself = henryC;
+var myself = henryX;
 // console.log('I am current', myself);
-henryC['middle_name'] = 'alexander';
+henryX['middleInitial'] = 'S';
 // console.log(myself);
 
-var thingsILike = ['beer', 'football', 'boats'];
+var thingsILike = ['rock climbing', 'piano', 'starcraft'];
 var awesomeThings = thingsILike;
 // console.log('awesome things: ', awesomeThings);
 thingsILike.push('dogs');
@@ -42,12 +42,12 @@ for (var i = countacular.length - 1; i >= 0; i--) {
 };
 
 var students = [{
-  'first_name': 'henry',
-  'last_name': 'clifford',
+  'firstName': 'henry',
+  'lastName': 'xie',
   'gender': 'male',
 },{
-  'first_name': 'jenny',
-  'last_name': 'morse',
+  'firstName': 'jenny',
+  'lastName': 'morse',
   'gender': 'female',
 }];
 
