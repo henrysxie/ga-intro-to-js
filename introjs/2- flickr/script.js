@@ -27,6 +27,8 @@ function addToDOM (photo) {
 
   // Grab image url and append to dom in a div with class "post"
 
+  // Set the width of the post to be that of the viewport
+
 }
 
 
